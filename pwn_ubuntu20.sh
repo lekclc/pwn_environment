@@ -11,7 +11,7 @@ cd /home/${username}/pwntools
 sudo apt update
 sudo apt install python3-pip
 python3 -m pip install --upgrade pip
-#wsl2
+#ubuntu 20.04-wsl2
 #sudo dpkg --add-architecture i386
 #sudo apt-get update
 #sudo apt-get -y install libc6-i386
