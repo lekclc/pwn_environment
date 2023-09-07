@@ -11,8 +11,8 @@ echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
 source ~/.bashrc
 #----------------------换源
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list && sudo apt update #更换源
-sudo apt install python3-pip #安装pip
-python3 -m pip install --upgrade pip #更新pip
+sudo apt install python3-pip  #安装pip 
+python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
 mkdir ~/.pip #创建pip文件夹
 touch ~/.pip/pip.conf #创建pip配置文件
 echo "[global]" >> ~/.pip/pip.conf #写入配置
@@ -26,8 +26,8 @@ gem sources -u  #更新源缓存
 #----------------------pwntools
 sudo apt-get update #更新源
 sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential #安装依赖
-python3 -m pip install --upgrade pip #更新pip
-python3 -m pip install --upgrade pwntools #安装pwntools
+python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
+python3 -m pip install --upgrade pwntools -i https://pypi.mirrors.ustc.edu.cn/simple #安装pwntools
 cd $HOME/Desktop/pwntools #进入pwntools文件夹
 mkdir requirements.txt #创建requirements.txt文件
 echo "wheel==0.30.0" > requirements.txt #写入配置
@@ -44,12 +44,12 @@ echo "pyelftools==0.24" >> requirements.txt
 echo "pyserial" >> requirements.txt
 echo "pykwalify" >> requirements.txt
 pip3 install --user -r requirements.txt
-rm -rf requirements.txt #删除requirements.txt文件
+rm -rf requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple #删除requirements.txt文件
 #----------------------
 sudo apt install wget #安装wget
 sudo apt install vim #安装vim
 sudo apt install gcc #安装gcc
-sudo apt-get -y install git gdb #安装git和gdb
+sudo apt-get -y install gdb #安装gdb
 #----------------------
 sudo gem install one_gadget #安装one_gadget
 sudo gem install seccomp-tools #安装seccomp-tools
