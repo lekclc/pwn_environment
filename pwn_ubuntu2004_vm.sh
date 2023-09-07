@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 #第一个运行
 path=$HOME/Desktop/pwn_environment #修改为当前路径
 
