@@ -6,10 +6,10 @@ ubuntu20.04
 执行次序      
 vmware
 1 pwn_ubuntu2004_vm.sh  
-2 install.sh  
+2 install.sh(自动执行)  
 3 zsh.sh  
 
 wsl2
 1 pwn_ubuntu2004_wsl2.sh  
-2 install.sh  
+2 install.sh(自动执行)  
 3 zsh.sh  
