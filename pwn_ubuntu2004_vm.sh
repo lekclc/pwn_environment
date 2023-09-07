@@ -7,8 +7,7 @@ mkdir $HOME/Desktop/pwntools #创建pwntools文件夹
 psths=$HOME/Desktop #当前路径
 cd $HOME/Desktop/pwntools #进入pwntools文件夹
 #----------------------配置
-echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
-source ~/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
 #----------------------换源
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list && sudo apt update #更换源
 sudo apt install python3-pip  #安装pip 
@@ -24,6 +23,7 @@ gem sources --remove https://rubygems.org/  #移除默认源
 gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
 gem sources -u  #更新源缓存
 #----------------------pwntools
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
 sudo apt-get update #更新源
 sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential #安装依赖
 python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
@@ -43,8 +43,7 @@ echo "gitlint" >> requirements.txt
 echo "pyelftools==0.24" >> requirements.txt
 echo "pyserial" >> requirements.txt
 echo "pykwalify" >> requirements.txt
-pip3 install --user -r requirements.txt
-rm -rf requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple #删除requirements.txt文件
+pip3 install --user -r requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple #安装依赖
 #----------------------
 sudo apt install wget #安装wget
 sudo apt install vim #安装vim
