@@ -12,10 +12,6 @@ echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list && sudo apt update #更换源
 sudo apt install python3-pip  #安装pip 
 python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
-mkdir ~/.pip #创建pip文件夹
-touch ~/.pip/pip.conf #创建pip配置文件
-echo "[global]" >> ~/.pip/pip.conf #写入配置
-echo "index-url =  https://pypi.mirrors.ustc.edu.cn/simple" >> ~/.pip/pip.conf #写入配置
 sudo apt install ruby #安装ruby
 sudo apt install gem #安装gem
 gem sources  #列出默认源
@@ -29,7 +25,7 @@ sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev b
 python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
 python3 -m pip install --upgrade pwntools -i https://pypi.mirrors.ustc.edu.cn/simple #安装pwntools
 cd $HOME/Desktop/pwntools #进入pwntools文件夹
-mkdir requirements.txt #创建requirements.txt文件
+touch requirements.txt #创建requirements.txt文件
 echo "wheel==0.30.0" > requirements.txt #写入配置
 echo "docutils" >> requirements.txt 
 echo "breathe==4.7.3" >> requirements.txt
