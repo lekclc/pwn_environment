@@ -14,5 +14,3 @@ chmod 775 install.sh #修改权限
 chmod 775 zsh.sh #修改权限
 
 bash pwn_ubuntu2004_vm.sh
-bash install.sh
-bash zsh.sh

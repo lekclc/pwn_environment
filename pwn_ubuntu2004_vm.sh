@@ -10,12 +10,6 @@ echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && source $HOME/.bash
 #----------------------换源
 sudo apt install python3-pip  #安装pip 
 python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
-sudo apt install ruby #安装ruby
-sudo apt install gem #安装gem
-gem sources  #列出默认源
-gem sources --remove https://rubygems.org/  #移除默认源
-gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
-gem sources -u  #更新源缓存
 #----------------------pwntools
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && source $HOME/.bashrc
 sudo apt-get update #更新源
@@ -46,9 +40,16 @@ sudo apt install wget #安装wget
 sudo apt install vim #安装vim
 sudo apt install gcc #安装gcc
 sudo apt install g++ #安装g++
-#----------------------
+sudo apt install ruby #安装ruby
+sudo apt install gem #安装gem
+gem sources  #列出默认源
+gem sources --remove https://rubygems.org/  #移除默认源
+gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
+gem sources -u  #更新源缓存
 sudo gem install one_gadget #安装one_gadget
-sudo gem install seccomp-tools #安装seccomp-tools
+sudo apt-get install ruby-full  #安装ruby
+sudo apt-get install build-essential #安装build-essential
+sudo gem install seccomp-tools  #安装seccomp-tools
 sudo apt install checksec #安装checksec
 sudo -H python3 -m pip install ROPgadget -i https://pypi.mirrors.ustc.edu.cn/simple #安装ROPgadget
 sudo apt install patchelf #安装patchelf
@@ -90,4 +91,5 @@ git clone https://github.com/matrix1001/glibc-all-in-one.git #下载glibc-all-in
 cd $HOME/Desktop/pwn_environment #进入pwn_environment文件夹
 sudo apt install zsh #安装zsh
 chsh -s /bin/zshsh  #修改默认shell
+bash install.sh
 #----------------------
