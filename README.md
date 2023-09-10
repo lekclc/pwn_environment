@@ -7,20 +7,13 @@
 #### 执行次序      
 先将do.sh内的内容复制到到.sh文件中, 然后执行
 
-在执行脚本前先执行一次命令
+可以在执行脚本前先执行一次命令
 
 ```
  echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
 ```
 
-##### vmware
 
-1 pwn_ubuntu2004_vm.sh  
-2 install.sh(自动执行)  
-3 zsh.sh  
 
-###### wsl2
-
-1 pwn_ubuntu2004_wsl2.sh  
-2 install.sh(自动执行)  
+1 do.sh  
 3 zsh.sh  

@@ -1,10 +1,6 @@
 #!/bin/bash
-#第一个运行
-path=$HOME/Desktop/pwn_environment #修改为当前路径
-
 #ubuntu 20.04
-psths=$HOME/Desktop #当前路径
-cd $HOME/Desktop/pwntools #进入pwntools文件夹
+cd $HOME/pwntools #进入pwntools文件夹
 #----------------------配置
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && source $HOME/.bashrc
 #----------------------换源
@@ -19,7 +15,7 @@ pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 python3 -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple #更新pip
 python3 -m pip install --upgrade pwntools -i https://pypi.mirrors.ustc.edu.cn/simple #安装pwntools
-cd $HOME/Desktop/pwntools #进入pwntools文件夹
+cd $HOME/pwntools #进入pwntools文件夹
 touch requirements.txt #创建requirements.txt文件
 echo "wheel==0.30.0" > requirements.txt #写入配置
 echo "docutils" >> requirements.txt 
@@ -54,41 +50,32 @@ sudo apt install checksec #安装checksec
 sudo -H python3 -m pip install ROPgadget -i https://pypi.mirrors.ustc.edu.cn/simple #安装ROPgadget
 sudo apt install patchelf #安装patchelf
 #----------------------
-#以下gdb安装脚本并不完善
-cd $HOME/Desktop/pwntools/gdb #进入gdb文件夹
-sudo apt remove gdb
-sudo apt install rpm
-rpm -qa | grep gdb
-wget http://ftp.gnu.org/gnu/gdb/gdb-13.2.tar.gz
-tar -zxvf gdb-13.2.tar.gz
-sudo apt install make
-cd gdb-13.2
-./configure
-make
-sudo make install
-cd $HOME/Desktop/pwntools/gdb #进入gdb文件夹
+cd $HOME/pwntools/gdb #进入gdb文件夹
+
+
+cd $HOME/pwntools/gdb #进入gdb文件夹
 git clone https://github.com/longld/peda.git
 git clone https://github.com/scwuaptx/Pwngdb.git
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
-cd $HOME/Desktop/pwntools/gdb
-cp $HOME/Desktop/pwntools/gdb/Pwngdb/.gdbinit $HOME/.gdbinit
+cd $HOME/pwntools/gdb
+cp $HOME/pwntools/gdb/Pwngdb/.gdbinit $HOME/.gdbinit
 cd $HOME #进入根目录
-echo "#source $HOME/Desktop/pwntools/gdb/peda/peda.py" > $HOME/.gdbinit #写入配置
-echo "source $HOME/Desktop/pwntools/gdb/pwndbg/gdbinit.py " >> $HOME/.gdbinit #写入配置
-echo "source $HOME/Desktop/pwntools/gdb/Pwngdb/pwngdb.py" >> $HOME/.gdbinit
-echo "source $HOME/Desktop/pwntools/gdb/Pwngdb/angelheap/gdbinit.py" >> $HOME/.gdbinit
+echo "#source $HOME/pwntools/gdb/peda/peda.py" > $HOME/.gdbinit #写入配置
+echo "source $HOME/pwntools/gdb/pwndbg/gdbinit.py " >> $HOME/.gdbinit #写入配置
+echo "source $HOME/pwntools/gdb/Pwngdb/pwngdb.py" >> $HOME/.gdbinit
+echo "source $HOME/pwntools/gdb/Pwngdb/angelheap/gdbinit.py" >> $HOME/.gdbinit
 
 #----------------------
-cd $HOME/Desktop/pwntools #进入pwntools文件夹
+cd $HOME/pwntools #进入pwntools文件夹
 git clone https://github.com/lieanu/LibcSearcher.git #下载LibcSearcher
 cd LibcSearcher #进入LibcSearcher文件夹
 sudo python3 setup.py develop #安装LibcSearcher
-cd $HOME/Desktop/pwntools #进入pwntools文件夹
+cd $HOME/pwntools #进入pwntools文件夹
 git clone https://github.com/matrix1001/glibc-all-in-one.git #下载glibc-all-in-one
 #----------------------zsh
-cd $HOME/Desktop/pwn_environment #进入pwn_environment文件夹
+cd $HOME/pwn_environment #进入pwn_environment文件夹
 sudo apt install zsh #安装zsh
 chsh -s /bin/zshsh  #修改默认shell
 bash install.sh
