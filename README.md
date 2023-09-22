@@ -14,6 +14,6 @@
 ```
 
 
-
+在$HOME下进行
 1 do.sh  
 3 zsh.sh  
