@@ -9,8 +9,8 @@ git clone https://github.com/lekclc/pwn_environment.git
 
 cd pwn_environment
 
-chmod 775 pwn_ubuntu2004_vm.sh #修改权限
-chmod 775 install.sh #修改权限
-chmod 775 zsh.sh #修改权限
+chmod 775 pwn_ubuntu2004_vm.sh 
+chmod 775 install.sh 
+chmod 775 zsh.sh 
 
 bash pwn_ubuntu2004_vm.sh
