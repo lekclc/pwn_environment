@@ -80,3 +80,12 @@ sudo apt install zsh #安装zsh
 chsh -s /bin/zshsh  #修改默认shell
 bash install.sh
 #----------------------
+#arm环境搭建
+sudo apt-get install qemu
+sudo apt-get install qemu-system qemu-user-static binfmt-support
+sudo apt-get install -y gcc-arm-linux-gnueabi
+sudo apt-get install qemu libncurses5-dev gcc-arm-linux-gnueabi 
+sudo apt-get install build-essential synaptic gcc-aarch64-linux-gnu 
+sudo apt-get install gdb-multiarch
+
+#----------------------
