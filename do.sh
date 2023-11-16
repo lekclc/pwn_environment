@@ -7,7 +7,7 @@ yes|list && sudo apt update
 yes|sudo apt install git
 yes|git clone https://github.com/lekclc/pwn_environment.git
 
-yes|cd pwn_environment
+cd pwn_environment
 
 yes|chmod 775 pwn_ubuntu2004_vm.sh 
 yes|chmod 775 install.sh 

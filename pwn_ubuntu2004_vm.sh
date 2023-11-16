@@ -1,6 +1,6 @@
 #!/bin/bash
 #ubuntu 20.04
-yes|cd $HOME/pwntools #进入pwntools文件夹
+cd $HOME/pwntools #进入pwntools文件夹
 #----------------------配置
 yes|echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && source $HOME/.bashrc
 #----------------------换源
@@ -58,10 +58,10 @@ yes|git clone https://github.com/longld/peda.git
 yes|git clone https://github.com/scwuaptx/Pwngdb.git
 yes|git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
-yes|./setup.sh
-yes|cd $HOME/pwntools/gdb
-yes|cp $HOME/pwntools/gdb/Pwngdb/.gdbinit $HOME/.gdbinit
-yes|cd $HOME #进入根目录
+./setup.sh
+cd $HOME/pwntools/gdb
+cp $HOME/pwntools/gdb/Pwngdb/.gdbinit $HOME/.gdbinit
+cd $HOME #进入根目录
 echo "#source $HOME/pwntools/gdb/peda/peda.py" > $HOME/.gdbinit #写入配置
 echo "source $HOME/pwntools/gdb/pwndbg/gdbinit.py " >> $HOME/.gdbinit #写入配置
 echo "source $HOME/pwntools/gdb/Pwngdb/pwngdb.py" >> $HOME/.gdbinit
