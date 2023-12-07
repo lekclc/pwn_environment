@@ -13,4 +13,4 @@ yes|chmod 775 pwn_ubuntu2004_vm.sh
 yes|chmod 775 install.sh 
 yes|chmod 775 zsh.sh 
 
-yes|bash pwn_ubuntu2004_vm.sh
+yes|bash pwn_ubuntu_vm.sh
