@@ -9,8 +9,8 @@ yes|git clone https://github.com/lekclc/pwn_environment.git
 
 cd pwn_environment
 
-yes|chmod 775 pwn_ubuntu2004_vm.sh 
-yes|chmod 775 install.sh 
-yes|chmod 775 zsh.sh 
+yes|chmod 775 $HOME/pwn_environment/pwn_ubuntu.sh 
+yes|chmod 775 $HOME/pwn_environment/install.sh 
+yes|chmod 775 $HOME/pwn_environment/zsh.sh 
 
-yes|bash pwn_ubuntu_vm.sh
+yes|bash $HOME/pwn_environment/pwn_ubuntu.sh
